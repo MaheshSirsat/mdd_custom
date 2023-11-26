@@ -1,0 +1,14 @@
+<mvc:View controllerName="mdd09.controller.View2"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:f="sap.f" height="100%" >
+    <Button text="THIS IS CONTENT 2" />
+      <Button text="THIS IS CONTENT" press='navto()' />
+   <f:FlexibleColumnLayout id="fcl">
+   <!-- <f:beginColumnPages>
+   </f:beginColumnPages>
+   <f:midColumnPages>
+   </f:midColumnPages> -->
+   </f:FlexibleColumnLayout>
+   
+</mvc:View>

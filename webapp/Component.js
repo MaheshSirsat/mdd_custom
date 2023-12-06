@@ -28,6 +28,14 @@ sap.ui.define([
                 this.getRouter().initialize();
 
                 // set the device model
+                var mode= new sap.ui.model.json.JSONModel()
+          mode.loadData("../../sap/opu/odata/sap/C_PURCHASEORDER_FS_SRV/C_PurchaseOrderFs?$top=100",{
+            top:100
+          }).then(function(data){
+           
+            sap.ui.getCore().setModel(mode,'basemodel1')
+            console.log('ready from comp');
+          })
                 this.setModel(models.createDeviceModel(), "device");
             }
         });

@@ -9,6 +9,7 @@ sap.ui.define([
 
         return Controller.extend("mdd09.controller.Main", {
             onInit: function () {
+                
 
             }
         });

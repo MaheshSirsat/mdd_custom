@@ -17,7 +17,7 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/sap/opu/odata/sap/C_PURCHASEORDER_FS_SRV/",
+        "uri": "/sap/opu/odata/sap/C_PURCHASEORDER_FS_SRV/C_PurchaseOrderFs",
         "type": "OData",
         "settings": {
           "annotations": [],
@@ -28,6 +28,7 @@
     }
   },
   "sap.ui": {
+    "fullWidth": true,
     "technology": "UI5",
     "icons": {
       "icon": "",
@@ -69,7 +70,8 @@
           "bundleName": "mdd09.i18n.i18n"
         }
       },
-      "": {
+      "qq": {
+        "type": "sap.ui.model.odata.v2.ODataModel",
         "dataSource": "mainService",
         "preload": true,
         "settings": {}

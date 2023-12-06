@@ -1,14 +1,28 @@
 <mvc:View controllerName="mdd09.controller.View2"
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m" xmlns:f="sap.f" height="100%" >
-    <Button text="THIS IS CONTENT 2" />
-      <Button text="THIS IS CONTENT" press='navto()' />
-   <f:FlexibleColumnLayout id="fcl">
-   <!-- <f:beginColumnPages>
-   </f:beginColumnPages>
-   <f:midColumnPages>
-   </f:midColumnPages> -->
-   </f:FlexibleColumnLayout>
    
+    xmlns="sap.m" xmlns:f="sap.f" height="100%" xmlns:customcontrol="mdd09.control" >
+    <Page>
+    
+<Button  text="THIS IS CONTENT of main field" press='navto()' />
+    
+    <HBox items="{basemodel>/d/results}"  wrap='Wrap'>
+    <customcontrol:card press='onpressfun' justifyContent="SpaceBetween" flexGrow="3" comname='{basemodel>CompanyCodeName}' client='{basemodel>CreatedByUser}' />
+
+    </HBox>
+    <Table id="mytable" items="{basemodel>/d/results}">
+    <columns>
+    <Column>
+    <Text text="Col1" />
+    </Column>
+    </columns>
+    <ColumnListItem>
+    <cells>
+        <Text text='{basemodel>CompanyCodeName}' />
+    </cells>
+    </ColumnListItem>
+    </Table>
+  
+   </Page>
 </mvc:View>
